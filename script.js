@@ -1,17 +1,23 @@
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const goBackBtn = document.getElementById("goBackBtn");
+const yesv1Btn= document.getElementById("yesv1Btn");
 
+const areYouSurePage = document.getElementById("areYouSurePage");
+const successPage = document.getElementById("successPage");
 const mainPage = document.getElementById("mainPage");
 const sadPage = document.getElementById("sadPage");
 const message = document.getElementById("message");
 
-yesBtn.addEventListener("click", () => {
-    message.innerHTML = "Are you sure?!";
-});
 
 yesBtn.addEventListener("click", () => {
-  message.innerHTML = "Yay! 💖 I knew it! Happy Valentine’s Day 🥰";
+  mainPage.classList.add("hidden");
+  areYouSurePage.classList.remove("hidden");
+});
+
+yesv1Btn.addEventListener("click", () => {
+  areYouSurePage.classList.add("hidden");
+  successPage.classList.remove("hidden");
 });
 
 noBtn.addEventListener("click", () => {
